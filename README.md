@@ -1,7 +1,7 @@
-# BksMyGold Customer Dashboard 1.0.0
+# TBC Cources 1.0.0
 
 
-Project start at : 25 sept 2023
+
 
 ## Available Scripts
 
