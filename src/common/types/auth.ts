@@ -1,0 +1,27 @@
+export type AuthUser = null | Record<string, any>;
+
+export type AuthState = {
+  isAuthenticated: boolean;
+  isInitialized: boolean;
+  user: AuthUser;
+};
+
+export type ActionMap<M extends { [index: string]: any }> = {
+  [Key in keyof M]: M[Key] extends undefined
+    ? {
+        type: Key;
+      }
+    : {
+        type: Key;
+        payload: M[Key];
+      };
+};
+
+export type ContextType = {
+  isAuthenticated: boolean;
+  isInitialized: boolean;
+  user: AuthUser;
+  login: VoidFunction;
+  register: VoidFunction;
+  logout: VoidFunction;
+};
